@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,19 +18,21 @@ const Header = ({ siteTitle }) => {
 
   return (
     <div>
-      <Navbar fixed="top" expand="sm">
-        <NavbarBrand href="/">{siteTitle}</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/about">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/tags">Tags</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
+      <Navbar color="light" light fixed="top" expand="sm">
+        <div className="container">
+          <NavbarBrand href="/">{siteTitle}</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/tags">Tags</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </div>
       </Navbar>
     </div>
   )
