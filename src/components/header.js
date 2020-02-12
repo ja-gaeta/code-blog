@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <div>
-      <Navbar color="light" light fixed="top" expand="sm">
+      <Navbar fixed="top" expand="sm">
         <div className="container">
           <NavbarBrand href="/">{siteTitle}</NavbarBrand>
           <NavbarToggler onClick={toggle} />
